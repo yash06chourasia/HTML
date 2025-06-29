@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Height Converter</title>
+
+</head>
+
+<body>
+
+   <h2>Height Converter</h2>
+
+   <label for="cmInput">Enter Height in Centimeters:</label>
+
+  <input type="number" id="cmInput">
+
+  <button onclick="convertCmToInches()">Convert to Inches</button>
+
+  <p id="inchesResult"></p>
+
+   <label for="inchesInput">Enter Height in Inches:</label>
+
+  <input type="number" id="inchesInput">
+
+  <button onclick="convertInchesToCm()">Convert to Centimeters</button>
+
+  <p id="cmResult"></p>
+
+   <script>
+
+    function convertCmToInches() {
+
+      const cmInput = document.getElementById("cmInput").value;
+
+      const inchesResult = document.getElementById("inchesResult");
+
+      const inches = cmInput / 2.54;
+
+      inchesResult.innerHTML = `${cmInput} centimeters is equal to ${inches.toFixed(2)} inches.`;
+
+    }
+
+    function convertInchesToCm() {
+
+      const inchesInput = document.getElementById("inchesInput").value;
+
+      const cmResult = document.getElementById("cmResult");
+
+      const centimeters = inchesInput * 2.54;
+
+      cmResult.innerHTML = `${inchesInput} inches is equal to ${centimeters.toFixed(2)} centimeters.`;
+
+    }
+
+  </script>
+
+ </body>
+
+</html>
